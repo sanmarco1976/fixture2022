@@ -1,0 +1,222 @@
+
+.contenedorPaises span{
+    margin-left: 0;
+}
+.grupos-contenedor{
+    height: auto!important;
+}
+.botonFix, .octavos, .cuartos, .semis{
+    width: 100%;
+    text-align: left;
+}
+#cruces{
+    display: grid;
+    grid-template-areas: "1"  "2";
+    padding: 20px;
+}
+#primerCruce, #tercerCruce, #quintoCruce, #septimoCruce{
+    grid-area: 1;
+}
+#segundoCruce, #cuartoCruce, #sextoCruce, #octavoCruce{
+    grid-area: 2;
+}
+#grupos{
+    height: auto!important;
+}
+#grupos{
+    height: 700px;
+} 
+#grupos h3{
+    font-family: "Arabic Heavy";
+    font-size: 4em;
+    letter-spacing: 16px;
+    color: var(--cuarto);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.grupos-contenedor{
+    padding-top: 20px; /*el padding top es de la misma altura que el header + 20px*/
+    display: grid;
+    grid-template-columns: repeat(4,270px);
+    grid-template-rows: repeat(2,230px);
+    justify-content: center;
+    justify-items: normal;
+    box-sizing: content-box;
+}
+
+#grupos h4{
+    box-sizing: content-box;
+    font-family: 'Arabic Bolt', Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: #F2F2F2;
+    border-bottom: 0.5px solid #F2F2F2 ;
+    margin: 0;
+    padding: 6px;
+}
+
+.grupo{
+    box-sizing: content-box;
+    background: #510509;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #500322,#260108);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #510509, #260108); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0 10px 10px 10px;
+    clip-path: polygon(0% 50%, 2% 1%, 50% 0%, 98% 1%, 100% 50%, 98% 99%, 50% 100%, 2% 99%);
+
+}
+.contenedorPaises{
+    padding: 10px 20px;
+}
+
+.pais{
+    margin: 0 auto;
+    min-height: 30px;
+    background: linear-gradient(to right, #f2f2f235, #F2F2F2);
+    clip-path: polygon(0% 50%, 2% 1%, 50% 0%, 98% 1%, 100% 50%, 98% 99%, 50% 100%, 2% 99%);
+    border: none;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.pais:hover{
+    background-color: var(--cuarto);
+}
+
+.contenedorPaises span{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.fixtureGrupos div{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#cruces8Vos, #cruces4tos{
+    display: grid;
+    grid-template-areas: "1 2";
+}
+h4{
+    width: 90%;
+}
+.final{
+    width: 60%;
+    text-align: left;
+}
+.blanco{
+    color: #f2f2f2;
+}
+.formularioFixtureInvisible{
+    display: none;
+}
+.inputFormulario{
+    background-color: #510509!important;
+    color: #f2f2f2!important;
+    margin-bottom: 1rem;
+}
+.enviar{ 
+    align-items:center;
+    text-align: center;
+    font-size: 1rem;
+    background-color: #510509!important;;
+    cursor: pointer;
+    clip-path: polygon(4% 50%, 10% 4%, 90% 4%, 96% 50%, 90% 96%, 10% 96%);
+    transition: all .5s;
+    padding: 5px 20px;
+    margin: 5px 0.2vw;
+    text-decoration: none;
+}
+.tituloFormulario{
+    font-family: "Arabic Heavy";
+    font-size: 4em;
+    letter-spacing: 16px;
+    color: var(--cuarto);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+/* Responsive */
+@media only screen and (max-width: 1050px){
+    #grupos{
+        height: 1100px;
+    }
+    .grupos-contenedor{
+       
+        grid-template-columns: repeat(2,270px);
+        grid-template-rows: repeat(4, 230px);
+    }
+    #cruces{
+        grid-template-areas: 
+        "cruce1 cruce2"
+        "cruce3 cruce4"
+        "cruce5 cruce6" 
+        "cruce7 cruce8" !important;
+        grid-template-columns: 1fr 1fr;
+    } 
+
+    #primerCruce{
+        grid-area: cruce1;
+    }
+    #tercerCruce{
+        grid-area: cruce2;
+    }
+    #quintoCruce{
+        grid-area: cruce3;
+    }
+    #septimoCruce{
+        grid-area: cruce4;
+    }
+    #segundoCruce{
+        grid-area: cruce5;
+    }
+    #cuartoCruce{
+        grid-area: cruce6;
+    }
+    #sextoCruce{
+        grid-area: cruce7;
+    }
+    #octavoCruce{
+        grid-area: cruce8;
+    }
+}
+
+@media only screen and (max-width: 529px){
+
+    #cruces, #cruces8Vos, #cruces4tos{
+        grid-template-areas: 
+        "cruce1" 
+        "cruce2"
+        "cruce3" 
+        "cruce4"
+        "cruce5" 
+        "cruce6" 
+        "cruce7" 
+        "cruce8" !important;
+        grid-template-columns: 1fr;
+    }
+    #grupos{
+       
+        box-sizing: content-box;
+    }
+    #grupos h3, .tituloFormulario{
+        font-size: 10vw;
+        letter-spacing:3vw;
+    }
+    #grupos h4{
+      
+        font-size: 5vw;
+    }
+    .grupos-contenedor{
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+      
+        justify-content: start;
+        align-items: center;
+       
+    }
+}

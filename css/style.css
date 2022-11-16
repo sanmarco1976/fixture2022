@@ -1,0 +1,179 @@
+/*PALETA DE COLORES INICIO*/
+*{
+    --fondo: #260108;
+    --primario: #8C0327;
+    --segundario: #590219;
+    --terceario: #BF064A;
+    --cuarto: #F2F2F2;
+    --alter: #9D451F;
+    --alter2: #156b48;
+    
+    --bordo: #8A1538;
+    --rojo: #BF064A;
+    --amarillo: #EEEEE4;
+    --celeste: #00CFB7;
+    --naranja: #FF6200;
+}
+/*PALETA DE COLORES FIN*/
+
+/*FUENTES - INICIO*/
+@font-face {
+    font-family: "Arabic Medium";
+    src: url(../font/Qatar2022/Graphik\ Arabic\ Medium.otf);
+}
+@font-face {
+    font-family: "Arabic Bolt";
+    src: url(../font/Qatar2022/Qatar2022Arabic-Bold.ttf);
+}
+@font-face {
+    font-family: "Arabic Heavy";
+    src: url(../font/Qatar2022/Qatar2022Arabic-Heavy.ttf);
+}
+.arabicMedium {font-family: "Arabic Medium";}
+.arabicBolt {font-family: "Arabic Bolt";}
+.arabicHeavy {font-family: "Arabic Heavy";}
+/*FUENTES - FIN*/
+
+/* BODY INICIO*/
+body {
+    margin: 0;
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #500322, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #510509, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* BODY FIN*/
+
+ /*ENCABEZADO INICIO*/
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    min-height: 30px;
+    align-items:center;
+    background-color: var(--cuarto) ;
+    background-image: url("../picture/fondo_gris.png");
+    border-bottom: 4px solid var(--terceario);
+    color: var(--segundario);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 10px 0;
+    font-family: "Arabic Heavy";
+    z-index: 11;
+}
+
+.logo {
+    width: 600px;
+    text-align: center;
+    font-size: 1.9rem;
+    -webkit-text-stroke: 1px rgb(80, 5, 5);
+	-webkit-text-fill-color:var(--bordo);
+}
+
+.menu {display: block;}
+
+.menu a {
+    float: right;
+    display: block;
+    align-items:center;
+    text-align: center;
+    font-size: 1rem;
+    background-color: var(--bordo);
+    color: var(--amarillo);
+    cursor: pointer;
+    clip-path: polygon(4% 50%, 10% 4%, 90% 4%, 96% 50%, 90% 96%, 10% 96%);
+    transition: all .5s;
+    padding: 5px 20px;
+    margin: 5px 0.2vw;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: var(--cuarto);
+    background: var(--rojo);
+    clip-path: polygon(0% 50%, 2% 0%, 98% 0%, 100% 50%, 98% 100%, 2% 100%);
+}
+
+.menu .icono_h {
+    display: none;
+    float: none;
+    clip-path: polygon(0% 50%, 4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%);
+  }
+/*ENCABEZADO FIN*/
+
+/*FOOTER INICIO*/
+footer {
+    width: 100%;
+    display: flex;
+    min-height: 30px;
+    align-items:center;
+    background-color: var(--cuarto);
+    background-image: url("../picture/fondo_gris.png");;
+    border-top: 4px solid var(--terceario);
+    color: var(--segundario);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 5px 0;
+    font-family: "Arabic Heavy";
+    
+}
+
+.menu_f a {
+    float: right;
+    display: block;
+    align-items:center;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: var(--fondo);
+    color: var(--amarillo);
+    cursor: pointer;
+    clip-path: polygon(4% 50%, 10% 4%, 90% 4%, 96% 50%, 90% 96%, 10% 96%);
+    transition: all .5s;
+    width: 50px;
+    padding: 8px 10px 6px 10px;
+    margin: 5px 0.2vw;
+    text-decoration: none;
+}
+
+.menu_f a:hover {
+    background: var(--rojo);
+    clip-path: polygon(0% 50%, 2% 0%, 98% 0%, 100% 50%, 98% 100%, 2% 100%);
+}
+/*FOOTER FIN*/
+
+/*RESPONSIVE INICIO*/
+@media screen and (max-width: 768px) {
+    header {
+        display: block;
+        padding: 0px;
+    }
+    .logo {
+        width: 100%;
+        font-size: 5vw;
+        margin: 0px;
+    }
+    .menu {width: 100%;}
+    .menu a:not(:first-child) {display: none;}
+    .menu a.icono_h {display: block;}
+    .menu.responsive {position: relative;}
+    .menu.responsive a {
+        float: none;
+        display: block;
+        clip-path: polygon(0% 50%, 4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%);
+    }
+    .menu.responsive a:hover {clip-path: polygon(0% 50%, 2% 0%, 98% 0%, 100% 50%, 98% 100%, 2% 100%);}
+    .menu_f a {
+        font-size: 1vw;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .menu a {font-size: 6vw;}
+    .menu.responsive a {font-size: 6vw;}
+}
+/*RESPONSIVE FIN*/

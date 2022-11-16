@@ -1,0 +1,236 @@
+
+.divEstadio{
+    width: 100vw;
+}
+
+.estadios{
+    display: grid;
+    width: 100%;
+    grid-template-areas: "imgG info";
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+    font-family: "Arabic Heavy";
+}
+.estadios-nombre{
+    grid-area: info;
+    /*font-size: 4rem;*/
+    font-size: 4vw;
+    text-align: center;
+    margin: 0rem;
+    color: var(--cuarto);
+    font-family: "Arabic Heavy";
+}
+.estdios-imgGrande{
+    grid-area: imgG;
+    width: 60rem;
+    height: 35rem;
+}
+.estdios-imgChico{
+    grid-area: imgC;
+    width: 26rem;
+    height: 26rem;
+    margin-top: 6rem;
+    margin-left: -13rem;
+}
+.estadios-infoYFoto{
+    grid-area: info;
+    display: grid;
+    grid-template-areas: "imgC informacion";
+}
+.estadios-info{
+    grid-area: informacion;
+    margin-right: 5rem;
+    margin-left: 15rem;
+    margin-top: 2rem;
+}
+.estadios-datos1{
+    margin-top: 3rem;
+}
+.estadios-datos1, .estadios-datos2, .estadios-datos3{
+    text-align:justify;
+    font-size: 1.3rem;
+    color: var(--cuarto);
+}
+.linea {
+    border-top: 1px solid var(--cuarto);
+    height: 2px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+}
+.boton-desplegable{
+    display: flex;
+    align-items:center;
+    text-align: center;
+    font-size: 16px;
+    background-color: var(--cuarto);
+    color: var(--segundario);
+    cursor: pointer;
+    clip-path: polygon(4% 50%, 14% 4%, 86% 4%, 96% 50%, 86% 96%, 14% 96%);
+    transition: all .5s;
+    padding: 10px 20px;
+    margin: 0px 0.25vw;
+}
+
+.boton-mapa{
+    display: none;
+}
+.desplegable:hover .boton-mapa{
+    display: block;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1760px){
+    .estdios-imgGrande{
+        width: 45rem;
+        height: 35rem;
+    } 
+}
+@media only screen and (max-width: 1440px){
+    .estdios-imgGrande{
+        width: 45rem;
+        height: 35rem;
+    } 
+    .estdios-imgChico{
+        margin-left: -16rem;
+    }
+    .estadios-info {
+        grid-area: informacion;
+        margin-right: 5rem;
+        margin-left: 10rem;
+        margin-top: 2rem;
+    }    
+}
+@media only screen and (max-width: 1400px){
+    .estdios-imgGrande{
+        width: 36rem;
+        height: 29rem;
+    } 
+}
+@media only screen and (max-width: 1024px){
+    .estadios{
+        grid-template-columns: 1fr 1fr;
+    }
+    .estdios-imgGrande{
+        width: 36rem;
+        height: 29rem;
+    } 
+    .estdios-imgChico {
+        grid-area: imgC;
+        width: 15rem;
+        height: 15rem;
+        margin-top: 5rem;
+        margin-left: -10rem;
+    }
+    .estadios-info {
+        grid-area: informacion;
+        margin-right: 1rem;
+        margin-left: 5rem;
+        margin-top: 2rem;
+    } 
+    .estadios-nombre {
+        /*font-size: 2.5rem;*/
+        font-size: 4vw;
+    }
+    .estadioImg{
+        width: 20rem;
+        height: 20rem;
+    }
+}
+@media only screen and (max-width: 950px){
+    .estadios{
+        grid-template-columns: 0.5fr 1.5fr;
+    }
+    .estdios-imgGrande{
+        width: 20rem;
+        height: 22rem;
+    } 
+    .estdios-imgChico {
+        display: flex;
+        grid-area: imgC;
+        width: 12rem;
+        height: 12rem;
+        margin-top: 5rem;
+        margin-left: -9rem;
+    }
+    .estadios-info {
+        grid-area: informacion;
+        margin-right: 1rem;
+        margin-left: 3rem;
+        margin-top: 2rem;
+    } 
+    .estadios-nombre {
+        font-size: 2.5rem;
+    }
+    .estadioImg{
+        width: 20rem;
+        height: 20rem;
+    }
+}
+@media only screen and (max-width: 427px){
+    .estadios {
+        display: grid;
+        width: 100%;
+        grid-template-areas: "imgG" "info";
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .estdios-imgGrande{
+        width: 24rem;
+        height: 24rem;
+    } 
+    .estdios-imgChico {
+        display: none;
+    }
+    .estadios-info {
+        grid-area: informacion;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        margin-top: 2rem;
+    } 
+    .estadios-nombre {
+        font-size: 3rem;
+    }
+    .estadioImg{
+        width: 21rem;
+        height: 20rem;
+    }
+}
+
+
+@media only screen and (max-width: 380px){
+    .estadios {
+        display: grid;
+        width: 100%;
+        grid-template-areas: "imgG" "info";
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .estdios-imgGrande{
+        width: 22rem;
+        height: 24rem;
+    } 
+    .estadioImg{
+        width: 20rem;
+        height: 20rem;
+    }
+}
+@media only screen and (max-width: 320px){
+    .estadios {
+        display: grid;
+        width: 100%;
+        grid-template-areas: "imgG" "info";
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .estdios-imgGrande{
+        width: 20rem;
+        height: 24rem;
+    } 
+    .estadioImg{
+        width: 18rem;
+        height: 20rem;
+    }
+    .estadios-nombre {
+        font-size: 2rem;
+    }
+}
